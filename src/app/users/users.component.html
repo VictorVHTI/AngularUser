@@ -1,0 +1,19 @@
+
+<h2>List Users</h2>
+
+<div class="row">
+    <div  class="col-xs-12 col-12">
+      <pagination class="d-flex justify-content-center" [totalItems]="20" [(ngModel)]="numberPage" (pageChanged)="pageChanged($event)"></pagination>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary"  [routerLink]="['/add-user']">ADD USER</button>
+
+<div class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active">
+    List Users
+  </button>
+  <button *ngFor="let l of listUsers"type="button" class="list-group-item list-group-item-action" [routerLink]="['/user-details', l.id]">
+      <img src="{{l.avatar}}" alt="" class="rounded-left">{{l.first_name}} {{l.last_name}}</button>
+</div>
+

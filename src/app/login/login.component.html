@@ -1,0 +1,40 @@
+<div id="body">
+  <div class="row">
+      <div class="col-6 text-center">
+          <div class="text-center">   
+              <div class="div-img">
+                  <img src="../../assets/img/calendar.svg">  
+              </div>                             
+              <h2>KITCHEN DUTY</h2>
+          </div>                 
+      </div>
+      <div class="col-6">
+
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <label class="text-left" for="exampleInputEmail1">Email address</label>
+              <div class="form-group input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                  </div>
+                  <input  [style.color]="color_valid ? 'black' : 'red' " ng-style=" " type="email" class="form-control" formControlName="email" id="email" aria-describedby="emailHelp" placeholder="Email">
+              </div>
+
+              <label class="text-left" for="exampleInputPassword1">Password</label>
+              <div class="form-group input-group mb-3">                               
+                  <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-unlock-alt"></i></span>
+                  </div>
+                  <input [style.color]="color_valid ? 'black' : 'red' " type="password" class="form-control" formControlName="password" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" id="exampleInputPassword1">
+              </div>
+              <button type="submit" class="btn btn-primary btn-login">LOGIN</button>
+          </form> 
+          
+          <!--<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <input id="email" type="email" formControlName="email">
+                <input id="password" type="password" formControlName="password">
+                <button class="button" type="submit">Login</button>
+            </form>-->
+
+      </div>
+  </div>   
+</div>
